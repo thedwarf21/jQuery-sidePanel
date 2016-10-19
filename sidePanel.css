@@ -1,0 +1,47 @@
+body {
+	overflow-x: hidden;
+}
+
+div.panel {
+	position: absolute;
+	top: 0;
+	width: 200;
+	z-index: 100;
+	border-left: 1px solid steelblue;
+	border-right: 1px solid steelblue;
+	text-align: center;
+	background-color: rgba(75, 75, 75, 0.9);
+	color: white;
+}
+
+div.toggle_bar {
+	position: absolute;
+	top: 0;
+	width: 5;
+	z-index: 100;
+	background-color: silver;
+	border-left: 1px solid steelblue;
+	border-right: 1px solid steelblue;
+}
+
+div.toggle_div {
+	position: absolute;
+	width: 32;
+	height: 32;
+	z-index: 100;
+	background-color: silver;
+	border: 1px solid steelblue;
+}
+
+div.panel div {
+	cursor: pointer;
+	font-size: 13pt;
+}
+
+div.panel div.item_menu:hover {
+	background-color: #333;
+}
+
+div.panel div.item_sommaire:hover {
+	background-color: #333;
+}
