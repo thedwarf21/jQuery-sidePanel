@@ -44,6 +44,7 @@ The method needs two parameters :
 $("#menu").mySidePanel("left", true);
 $("#summary").mySidePanel("right", false);
 ```
+This code will generate a side panel on the left, visible on creation, using `$("#menu")` element content and another on the right, hidden on creation, using `$("#summary")` element content.
 
 # Known bugs
 
