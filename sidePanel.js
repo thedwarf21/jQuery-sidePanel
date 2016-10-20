@@ -15,15 +15,19 @@
 			var panel_id = $(this).attr("myid");
 
 			// Panel and toggle bar generation.
+			var contentDiv = ($("<div></div>").addClass("scrollable").attr("myid", panel_id));
+			$(this).children().each(function() { contentDiv.append($(this)); });
+			$(this).append(contentDiv);
 			$(this).children(":first").before($("<h3></h3>").html($(this).attr("title")));
 			$(this).css("height", $(window).height());
 			$(this).append($("<div></div>").addClass("toggle_bar")
 					.attr("myid", panel_id)
 					.css("height", $(window).height())
 			);
+			contentDiv.css("height", $(window).height() - $(this).children("h3").outerHeight() -40);
 			$(this).append($("<div></div>").addClass("toggle_div")
 					.attr("myid", panel_id)
-					.css("top", ($(window).height() / 2) + 25)
+					.css("top", ($(window).height() / 2) + 16)
 			);
 
 			// Panel and toggle bar positionning.
@@ -71,7 +75,9 @@
 			$(window).resize(function () {
 				$("div[displayed][myid='" + panel_id + "']").css("height", $(this).height());
 				$(".toggle_bar[myid='" + panel_id + "']").css("height", $(this).height());
-				$(".toggle_div[myid='" + panel_id + "']").css("top", ($(this).height() / 2) + 25);
+				$(".toggle_div[myid='" + panel_id + "']").css("top", ($(this).height() / 2) + 16);
+				$(".scrollable[myid='" + panel_id + "']").css("height",  $(this).height() - 
+						$("div[myid='" + panel_id + "']").children(":first").outerHeight() -40);
 			});
 			
 			/**********************************************************************

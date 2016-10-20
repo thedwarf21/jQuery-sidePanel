@@ -1,5 +1,6 @@
 body {
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 div.panel {
@@ -38,10 +39,28 @@ div.panel div {
 	font-size: 13pt;
 }
 
+div.panel div.scrollable {
+	border-top: 1px solid steelblue;
+	position: relative;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
 div.panel div.item_menu:hover {
 	background-color: #333;
 }
 
 div.panel div.item_sommaire:hover {
+	background-color: #333;
+}
+
+div.panel a.doc {
+	cursor: pointer;
+	font-size: 13pt;
+	color: white;
+	text-decoration: none;
+}
+
+div.panel a.doc:hover {
 	background-color: #333;
 }
