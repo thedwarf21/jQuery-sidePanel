@@ -48,4 +48,3 @@ $("#summary").mySidePanel("right", false);
 # Known bugs
 
 * The script doesn't control if you create two panels on the same side whitch would generate bugs.
-* The panel auto resize with the window, but I still didn't find how to put the scroll on it : I tried to add (`overflow-y: auto;` on `.panel` class but it made my panels dissapear. If someone finds out...
